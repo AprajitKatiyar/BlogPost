@@ -67,7 +67,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: "756060317011-t2pmb0qj9421t6g1mp02ul1vhk6a7b8g.apps.googleusercontent.com",
     clientSecret: "9RjNHqDHuGN6VzckhakhXTjK",
-    callbackURL: "http://localhost:3000/auth/google/compose",
+    callbackURL: "https://shielded-tundra-86084.herokuapp.com/auth/google/compose",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {

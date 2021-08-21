@@ -28,7 +28,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin-aprajit:Countingstars_123@cluster0.vzpri.mongodb.net/blogDB", {useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect(process.env.URL, {useNewUrlParser: true,useUnifiedTopology: true});
 mongoose.set("useCreateIndex", true);
 
 const postSchema = new mongoose.Schema({
@@ -65,8 +65,8 @@ passport.deserializeUser(function(id, done) {
 });
 
 passport.use(new GoogleStrategy({
-    clientID: "756060317011-t2pmb0qj9421t6g1mp02ul1vhk6a7b8g.apps.googleusercontent.com",
-    clientSecret: "9RjNHqDHuGN6VzckhakhXTjK",
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
     callbackURL: "https://shielded-tundra-86084.herokuapp.com/auth/google/compose",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },

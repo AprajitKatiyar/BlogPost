@@ -10,9 +10,10 @@
     margin-bottom: 0;
     font-size: 12px;
     letter-spacing: 5px;
+    background-color: #F4DFD0;
 }
 .navbar-nav  li a:hover {
-    color: #F4DFD0 !important;
+    color: #0E0E0E !important;
 }
 
 
